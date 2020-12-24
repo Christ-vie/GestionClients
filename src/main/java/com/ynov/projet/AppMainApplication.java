@@ -14,14 +14,14 @@ public class AppMainApplication  implements CommandLineRunner {
 
     @Autowired
     private IDao iDao;
-    private RepositoryRestConfiguration restConfiguration;
+
     public static void main(String[] args) {
-        SpringApplication.run( AppMainApplication .class, args);
+        SpringApplication.run( AppMainApplication.class, args);
     }
 
     @Override
     public void run(String... args) throws Exception {
-        restConfiguration.exposeIdsFor(Client.class);
+
         iDao.save(new Client(4,"laura","kaka"));
         iDao.save(new Client(6,"junior","malaika"));
         iDao.save(new Client(5,"Skama","nocx"));
